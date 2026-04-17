@@ -45,7 +45,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/kaidecoffee/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[var(--accent)]"

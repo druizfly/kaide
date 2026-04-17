@@ -65,12 +65,12 @@ export function Location() {
               Abrir en Google Maps →
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/kaidecoffee/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-11 items-center rounded-full border border-[var(--accent)]/30 px-6 text-sm font-medium text-[var(--accent)] transition-colors hover:border-[var(--accent)]"
             >
-              Síguenos @kaide
+              Síguenos @kaidecoffee
             </a>
           </div>
         </div>
