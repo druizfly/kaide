@@ -34,7 +34,9 @@ src/
   components/      # Header, Hero, About, Menu, Service, Location, Footer, Logo
   lib/
     menu.ts        # source of truth for the carta
-public/            # SVG placeholders
+public/
+  images/          # photos referenced from the site (hero, about, location)
+pictures/          # raw photo materials, gitignored (not shipped)
 ```
 
 ## Editing the menu

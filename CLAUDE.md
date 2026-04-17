@@ -2,6 +2,8 @@
 
 Specialty coffee landing page for **Kaide**, a café in Valencia. Single-page, Spanish-first, static marketing site.
 
+Deployed at: https://kaide-orcin.vercel.app/
+
 ## Stack (actual, installed)
 
 - Next.js **16.2.4** (App Router)
@@ -27,7 +29,7 @@ No backend, database, tests, analytics, or API routes are wired up. If you need 
   - `globals.css` — Tailwind import + brand design tokens + `fade-up` / `grain` utilities
 - `src/components/` — page sections: `Header`, `Hero`, `About`, `Menu`, `Service`, `Location`, `Footer`, plus `Logo` / `Wordmark`
 - `src/lib/menu.ts` — **single source of truth** for the carta (categories, items, prices, allergens, ES/EN copy). Edit here to change the menu.
-- `public/` — placeholder SVGs only (no real photography yet)
+- `public/images/` — photos used by the site (JPG). Raw unprocessed materials live in `pictures/` (gitignored).
 
 ## Design system
 

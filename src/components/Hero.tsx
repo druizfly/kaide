@@ -1,4 +1,4 @@
-import { Logo } from "./Logo";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -41,13 +41,15 @@ export function Hero() {
 
         <div className="relative md:col-span-5">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-[var(--surface)]">
-            <div
-              className="absolute inset-0 flex items-center justify-center text-[var(--accent)]"
-              aria-hidden="true"
-            >
-              <Logo className="h-40 w-40 opacity-40" />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-light)]/30 via-transparent to-[var(--accent)]/20" />
+            <Image
+              src="/images/hero.jpg"
+              alt="Interior de Kaide, café de especialidad en Valencia"
+              fill
+              priority
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-light)]/20 via-transparent to-[var(--accent)]/30" />
             <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-[var(--background)]/85 p-5 backdrop-blur-sm">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
                 Especial de la semana

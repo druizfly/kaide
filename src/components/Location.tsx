@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const hours = [
   { days: "Lunes – Viernes", time: "08:00 – 19:00" },
   { days: "Sábado", time: "09:00 – 20:00" },
@@ -9,6 +11,15 @@ export function Location() {
     <section id="visitanos" className="border-t border-[var(--border)]/60">
       <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
+          <div className="relative mb-10 aspect-[4/3] w-full overflow-hidden rounded-[2rem] bg-[var(--surface)]">
+            <Image
+              src="/images/location.jpg"
+              alt="Fachada de Kaide en Valencia"
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </div>
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
             Visítanos
           </p>

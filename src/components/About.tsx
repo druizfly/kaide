@@ -1,8 +1,19 @@
+import Image from "next/image";
+
 export function About() {
   return (
     <section id="cafe" className="border-t border-[var(--border)]/60 bg-[var(--surface)]/50">
       <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 md:grid-cols-12 md:px-10">
         <div className="md:col-span-5">
+          <div className="relative mb-10 aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-[var(--surface)]">
+            <Image
+              src="/images/about-cafe.jpg"
+              alt="Detalle de la barra de Kaide con un café recién servido"
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </div>
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[var(--muted)]">
             Quiénes somos
           </p>

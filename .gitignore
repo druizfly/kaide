@@ -36,6 +36,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw photo materials (processed assets live in public/images/)
+/pictures/
+/AMG9lESMHfq*
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.env*.local
