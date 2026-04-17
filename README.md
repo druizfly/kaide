@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kaide
 
-## Getting Started
+Landing page for **Kaide**, a specialty coffee shop in Valencia. Single page, Spanish-first, static.
 
-First, run the development server:
+Sections: hero, about, carta (with ES/EN toggle and allergen legend), service principles, location + Google Maps embed, footer.
+
+## Stack
+
+Next.js 16 · React 19 · TypeScript · Tailwind CSS v4
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run build` — production build
+- `npm run start` — serve the built app
+- `npm run lint` — ESLint
 
-## Learn More
+## Project layout
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    layout.tsx     # fonts, <html lang="es">, SEO metadata
+    page.tsx       # composes the landing sections
+    globals.css    # Tailwind + brand CSS variables
+  components/      # Header, Hero, About, Menu, Service, Location, Footer, Logo
+  lib/
+    menu.ts        # source of truth for the carta
+public/            # SVG placeholders
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing the menu
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All menu content lives in [`src/lib/menu.ts`](src/lib/menu.ts). Each item looks like:
 
-## Deploy on Vercel
+```ts
+{
+  name: "Salmón",
+  nameEn: "Salmon",                 // optional, shown when EN toggle is on
+  description: "Ricota, salmón, …", // optional
+  descriptionEn: "Ricotta, salmon, …",
+  price: "11 €",
+  allergens: ["gluten", "lacteos", "pescado", "mostaza"],
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Allergen keys (`gluten`, `cacahuetes`, `frutosCascara`, `mostaza`, `sesamo`, `soja`, `lacteos`, `pescado`) render as colored dots and a legend.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Design tokens
+
+Brand colors and typography live as CSS variables in [`src/app/globals.css`](src/app/globals.css) and are exposed to Tailwind via `@theme inline`. Use them in JSX like `bg-[var(--accent)]` or `text-[var(--muted)]`.
+
+## Deploy
+
+Target: [Vercel](https://vercel.com).
