@@ -3,7 +3,6 @@ import { Logo, Wordmark } from "./Logo";
 
 const navItems = [
   { label: "Café", href: "#cafe" },
-  { label: "Carta", href: "#carta" },
   { label: "Servicio", href: "#servicio" },
   { label: "Visítanos", href: "#visitanos" },
 ];

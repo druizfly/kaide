@@ -25,14 +25,8 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
-              href="#carta"
-              className="inline-flex h-12 items-center rounded-full bg-[var(--accent)] px-7 text-sm font-medium text-[var(--background)] transition-transform hover:-translate-y-0.5"
-            >
-              Ver la carta
-            </a>
-            <a
               href="#visitanos"
-              className="inline-flex h-12 items-center rounded-full border border-[var(--accent)]/30 px-7 text-sm font-medium text-[var(--accent)] transition-colors hover:border-[var(--accent)]"
+              className="inline-flex h-12 items-center rounded-full bg-[var(--accent)] px-7 text-sm font-medium text-[var(--background)] transition-transform hover:-translate-y-0.5"
             >
               Cómo llegar →
             </a>

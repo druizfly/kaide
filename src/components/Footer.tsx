@@ -21,7 +21,6 @@ export function Footer() {
           </h4>
           <ul className="space-y-2 text-sm text-[var(--muted)]">
             <li><a href="#cafe" className="hover:text-[var(--accent)]">El café</a></li>
-            <li><a href="#carta" className="hover:text-[var(--accent)]">La carta</a></li>
             <li><a href="#servicio" className="hover:text-[var(--accent)]">Servicio</a></li>
             <li><a href="#visitanos" className="hover:text-[var(--accent)]">Visítanos</a></li>
           </ul>
