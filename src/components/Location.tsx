@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const hours = [
-  { days: "Lunes – Viernes", time: "08:00 – 19:00" },
-  { days: "Sábado", time: "09:00 – 20:00" },
-  { days: "Domingo", time: "09:30 – 15:00" },
+  { days: "Lunes – Viernes", time: "08:30 – 19:00" },
+  { days: "Sábado", time: "08:30 – 17:00" },
+  { days: "Domingo", time: "08:30 – 17:00" },
 ];
 
 export function Location() {
